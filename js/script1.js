@@ -1,4 +1,3 @@
-
 const COLOR_LIST = ['#7f00ff','#ff00ff','#0000ff','#007fff','#00ffff'];
 let $targetList;
 
