@@ -1,0 +1,214 @@
+@charset "UTF-8";
+.nav {
+  background: black;
+  color: white;
+  height: 50px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  line-height: 150%;
+  padding-bottom: 5px;
+}
+.nav a:hover {
+  color: #ffce14;
+  border-bottom: 2px solid#ffce14;
+}
+.nav ul {
+  padding-left: 1000px;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav__container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__container__list {
+  /* display: flex; */
+  /* flex-direction: row; */
+  font-family: 'Noto Sans HK', sans-serif;
+}
+.nav__container__list li {
+  padding: 5px;
+  margin: 10px;
+}
+.nav__container__list .dropDown::after {
+
+  display: inline-block;
+  margin-left: 5px;
+}
+.nav__container__list--dropDown {
+  display: none;
+  position: absolute;
+  background: black;
+  padding: 10px;
+}
+
+@media screen and (max-width: 725px) {
+  .nav__container {
+    max-width: 98%;
+  }
+  .nav__container #hamburgerToggle {
+    position: absolute;
+    right: 1%;
+    top: 25px;
+    padding: 10px 40px 10px 0px;
+  }
+  .nav__container #hamburgerToggle:hover {
+    color: none;
+    border-bottom: 2px solid transparent;
+  }
+  .nav__container #hamburgerToggle span, .nav__container #hamburgerToggle span::before, .nav__container #hamburgerToggle span::after {
+    content: '';
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav__container #hamburgerToggle span:before {
+    top: -10px;
+  }
+  .nav__container #hamburgerToggle span:after {
+    bottom: -10px;
+  }
+  .nav__container #hamburgerToggle.active span {
+    background-color: transparent;
+  }
+  .nav__container #hamburgerToggle.active span:before, .nav__container #hamburgerToggle.active span:after {
+    top: 0;
+  }
+  .nav__container #hamburgerToggle.active span:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .nav__container #hamburgerToggle.active span:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .nav__container__list {
+    display: none;
+    position: absolute;
+    background: black;
+    padding: 0 100px;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    text-align: center;
+  }
+  .nav__container__list--dropDown {
+    display: block;
+    position: relative;
+  }
+  .nav__container__list li {
+    padding: 5px 0 5px 5px;
+    margin: 10px 0 10px 20px;
+  }
+}
+@media screen and (min-width: 725px) {
+  .nav__container__list {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+
+/* 헤드 */
+
+
+.logo img {
+	padding-top: 100px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	height: 250px;
+}
+.d-block {
+	height: 550px;
+	margin-top: 60px;
+	margin-bottom: 10px;
+}
+hr {
+	size: 1px;
+	background-color: black;
+}
+h5 {
+	text-align: center;
+	letter-spacing: 1em;
+}
+.col-md-2 h5 {
+	font-family: Staatliches;
+  letter-spacing: 0.2px;
+}
+.date {
+	font-family: Staatliches;
+	letter-spacing: 0.2em;
+  font-size: 12px;
+}
+.titre {
+	font-family: sedgwick ave display;
+  font-size: 60px;
+}
+.texte {
+	font-family: lekton;
+  font-size: 12px;
+}
+.reseau img{
+	width: 17px;
+	height: 17px;
+	padding-right: 2px;
+}
+div .reseau {
+	height: 130px;
+	/* text-align: center; */
+}
+div .social {
+	margin-left: 0;
+}
+.reseau h5 {
+font-family: lato thin;
+  letter-spacing: 1px;
+  font-size: 10px;
+  text-decoration-line: underline;
+}
+.container .col-md-5 {
+	margin-top: 80px;
+	margin-bottom: 100px;
+}
+.container .col-md-6 {
+	margin-top: 80px;
+}
+.col-md-4 {
+	margin-bottom: 100px;
+}
+form {
+	text-align: center;
+	height: 200px;
+	margin-top: 0;
+	padding-top: 30px;
+}
+form p {
+	font-family: lato thin;
+	letter-spacing: 0.5em;
+  font-size: 10px;
+}
+input {
+	text-align: center;
+	border: 0px;
+	border-bottom: 1px solid black;
+	padding-top: 10px;
+	width: 300px;
+}
+.footer {
+  padding-top: 30px;
+  background-color: #F5F5F5;
+  font-family: Staatliches;
+  font-size: 12px;
+}
+

@@ -1,0 +1,220 @@
+@charset "UTF-8";
+.nav {
+  background: black;
+  color: white;
+  height: 50px;
+}
+.nav a {
+  color: white;
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  line-height: 150%;
+  padding-bottom: 5px;
+}
+.nav a:hover {
+  color: #ffce14;
+  border-bottom: 2px solid#ffce14;
+}
+.nav ul {
+  padding-left: 0;
+}
+.nav ul li {
+  list-style: none;
+}
+.nav__container {
+  max-width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.nav__container__list {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Noto Sans HK', sans-serif;
+}
+.nav__container__list li {
+  padding: 5px;
+  margin: 10px;
+}
+.nav__container__list .dropDown::after {
+
+  display: inline-block;
+  margin-left: 5px;
+}
+.nav__container__list--dropDown {
+  display: none;
+  position: absolute;
+  background: black;
+  padding: 10px;
+}
+
+@media screen and (max-width: 725px) {
+  .nav__container {
+    max-width: 98%;
+  }
+  .nav__container #hamburgerToggle {
+    position: absolute;
+    right: 1%;
+    top: 25px;
+    padding: 10px 40px 10px 0px;
+  }
+  .nav__container #hamburgerToggle:hover {
+    color: none;
+    border-bottom: 2px solid transparent;
+  }
+  .nav__container #hamburgerToggle span, .nav__container #hamburgerToggle span::before, .nav__container #hamburgerToggle span::after {
+    content: '';
+    height: 5px;
+    width: 35px;
+    background: white;
+    position: absolute;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  .nav__container #hamburgerToggle span:before {
+    top: -10px;
+  }
+  .nav__container #hamburgerToggle span:after {
+    bottom: -10px;
+  }
+  .nav__container #hamburgerToggle.active span {
+    background-color: transparent;
+  }
+  .nav__container #hamburgerToggle.active span:before, .nav__container #hamburgerToggle.active span:after {
+    top: 0;
+  }
+  .nav__container #hamburgerToggle.active span:before {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .nav__container #hamburgerToggle.active span:after {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+  .nav__container__list {
+    display: none;
+    position: absolute;
+    background: black;
+    padding: 0 100px;
+    width: 100%;
+    left: 0;
+    top: 60px;
+    text-align: center;
+  }
+  .nav__container__list--dropDown {
+    display: block;
+    position: relative;
+  }
+  .nav__container__list li {
+    padding: 5px 0 5px 5px;
+    margin: 10px 0 10px 20px;
+  }
+}
+@media screen and (min-width: 725px) {
+  .nav__container__list {
+    display: flex !important;
+    flex-direction: row;
+  }
+}
+
+/* 헤더 css */
+
+body, html{
+  height:100%;
+  margin:0;
+  font-size:16px;
+  font-family:"Lato", sans-serif;
+  font-weight:400;
+  line-height:.9em;
+  color:#666;
+}
+
+.img1, .img2, .img3{
+  position:relative;
+  /* opacity:0.70; */
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+
+  /*
+    fixed = parallax
+    scroll = normal
+  */
+  background-attachment:fixed;
+}
+
+
+
+.img1{
+  background-image:url('https://i.ytimg.com/vi/IvWJKo6wN8I/maxresdefault.jpg');
+  min-height:100%;
+}
+
+.img2{
+  background-image:url('https://images.justwatch.com/backdrop/12325789/s1440/yves-saint-laurent-2014');
+  min-height:100%;;
+}
+
+.img3{
+  background-image:url('https://images.pexels.com/photos/1884583/pexels-photo-1884583.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  min-height:100%;;
+}
+
+.section{
+  text-align:center;
+  padding:50px 80px;
+}
+
+.section-light{
+  background-color:#f4f4f4;
+  color:#666;
+  line-height:30px; 
+  font-size: 20px;
+font-family: 'Aguafina Script', cursive;
+}
+
+h2{
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size:30px;
+  color:gray;
+}
+
+.section-dark{
+  background-color:black;
+  color:#ddd;
+  line-height:30px; 
+  font-size: 20px;
+  font-family: 'Aguafina Script', cursive;
+}
+
+.ptext{
+  position:absolute;
+  top:50%;
+  width:100%;
+  text-align:center;
+  color:#000;
+  font-size:27px;
+  letter-spacing:8px;
+  text-transform:uppercase;
+}
+
+.ptext .border{
+  background-color:#111;
+  color:#ffce14;
+  padding:20px;
+}
+
+.ptext .border.trans{
+  background-color:transparent;
+}
+.media {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-53%, -50%);
+  }
+
+
+
+
